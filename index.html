@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agente de WhatsApp para atendimento multidisciplinar em empresas de estética">
+    <title>BeautyBot - Seu Assistente Virtual de Estética</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .shadow-custom {
+            box-shadow: 0 10px 25px -5px rgba(245, 87, 108, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Cabeçalho/Navegação -->
+    <header class="bg-white shadow-md fixed w-full z-10">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold text-pink-500">BeautyBot</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-gray-700 hover:text-pink-500 transition">Início</a>
+                <a href="#recursos" class="text-gray-700 hover:text-pink-500 transition">Recursos</a>
+                <a href="#beneficios" class="text-gray-700 hover:text-pink-500 transition">Benefícios</a>
+                <a href="#depoimentos" class="text-gray-700 hover:text-pink-500 transition">Depoimentos</a>
+                <a href="#contato" class="text-gray-700 hover:text-pink-500 transition">Contato</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção Hero -->
+    <section id="inicio" class="gradient-bg pt-28 pb-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+                    Transforme o atendimento da sua clínica de estética
+                </h1>
+                <p class="text-lg md:text-xl text-white opacity-90 mb-8">
+                    O BeautyBot é um assistente virtual que automatiza agendamentos, responde dúvidas e fideliza seus
+                    clientes 24 horas por dia, 7 dias por semana.
+                </p>
+                <div
+                    class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contato"
+                        class="bg-white text-pink-500 hover:bg-gray-100 py-3 px-8 rounded-full font-semibold shadow-lg hover-scale">
+                        Começar agora
+                    </a>
+                    <a href="#demonstracao"
+                        class="border-2 border-white text-white hover:bg-white hover:text-pink-500 py-3 px-8 rounded-full font-semibold transition-colors duration-300">
+                        Ver demonstração
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    alt="BeautyBot em ação" class="rounded-lg shadow-xl hover-scale">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Recursos -->
+    <section id="recursos" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Recursos Principais</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-custom hover-scale">
+                    <div class="text-pink-500 text-4xl mb-4">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Agendamento Automático</h3>
+                    <p class="text-gray-600">Permita que seus clientes agendem procedimentos diretamente pelo WhatsApp,
+                        sem intervenção humana.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-custom hover-scale">
+                    <div class="text-pink-500 text-4xl mb-4">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Atendimento 24/7</h3>
+                    <p class="text-gray-600">Responda dúvidas e forneça informações a qualquer hora do dia ou da noite,
+                        mesmo quando sua equipe não está disponível.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-custom hover-scale">
+                    <div class="text-pink-500 text-4xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Análise de Dados</h3>
+                    <p class="text-gray-600">Obtenha insights valiosos sobre as preferências dos clientes e otimize suas
+                        estratégias de marketing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Banco de Dados -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Nosso Sistema de Banco de Dados</h2>
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Armazenamento seguro e eficiente</h3>
+                    <p class="text-gray-600 mb-6">Nosso sistema utiliza um banco de dados robusto e seguro para
+                        armazenar todas as informações dos seus clientes, agendamentos e histórico de atendimentos.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Criptografia de ponta a ponta para dados sensíveis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Backup automático diário para evitar perda de dados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Integração com sistemas de gestão existentes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Conformidade total com a LGPD</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1536&q=80"
+                        alt="Sistema de banco de dados para clínicas de estética"
+                        class="rounded-lg shadow-xl hover-scale">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Benefícios -->
+    <section id="beneficios" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Benefícios para seu Negócio</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Benefícios do BeautyBot" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <div class="mb-6">
+                        <div class="flex items-start">
+                            <div class="text-pink-500 mr-4">
+                                <i class="fas fa-check-circle text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-gray-800">Aumento de Produtividade</h3>
+                                <p class="text-gray-600">Libere sua equipe para focar no que realmente importa:
+                                    proporcionar experiências excepcionais aos clientes presentes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex items-start">
+                            <div class="text-pink-500 mr-4">
+                                <i class="fas fa-check-circle text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-gray-800">Redução de Faltas</h3>
+                                <p class="text-gray-600">Lembretes automáticos reduzem significativamente o número de
+                                    faltas e cancelamentos de última hora.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-start">
+                            <div class="text-pink-500 mr-4">
+                                <i class="fas fa-check-circle text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-gray-800">Fidelização de Clientes</h3>
+                                <p class="text-gray-600">Mantenha contato constante com seus clientes, enviando
+                                    promoções personalizadas e dicas de beleza.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section id="depoimentos" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">O que nossos clientes dizem</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="text-pink-500 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"O BeautyBot transformou completamente o fluxo de trabalho da minha
+                        clínica. Reduzimos custos com recepção e aumentamos os agendamentos em 30%."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Cliente"
+                            class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Ana Oliveira</h4>
+                            <p class="text-gray-500 text-sm">Proprietária da Clínica Beleza Natural</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="text-pink-500 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Meus clientes adoram a praticidade de agendar pelo WhatsApp a
+                        qualquer hora. As confirmações automáticas reduziram nossas faltas em mais de 50%."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente"
+                            class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Carlos Santos</h4>
+                            <p class="text-gray-500 text-sm">Gerente do Espaço Estética Avançada</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="text-pink-500 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"O suporte é excelente e o sistema é muito intuitivo. Conseguimos
+                        personalizar o bot para atender exatamente às necessidades da nossa clínica."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente"
+                            class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Mariana Costa</h4>
+                            <p class="text-gray-500 text-sm">Diretora da Estética Bem Estar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="py-20 gradient-bg">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow-xl p-8 max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Transforme sua clínica hoje mesmo</h2>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="nome" class="block text-gray-700 mb-2">Nome</label>
+                            <input type="text" id="nome"
+                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email"
+                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="telefone" class="block text-gray-700 mb-2">Telefone</label>
+                        <input type="tel" id="telefone"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                    </div>
+                    <div>
+                        <label for="mensagem" class="block text-gray-700 mb-2">Mensagem</label>
+                        <textarea id="mensagem" rows="4"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit"
+                            class="bg-pink-500 text-white py-3 px-8 rounded-full font-semibold shadow-lg hover:bg-pink-600 transition hover-scale">
+                            Solicitar demonstração
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold text-pink-400 mb-4">BeautyBot</h3>
+                    <p class="text-gray-400 max-w-md">Transformando o atendimento de clínicas de estética com tecnologia
+                        de ponta e automação inteligente.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Links Rápidos</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#inicio" class="text-gray-400 hover:text-pink-400 transition">Início</a></li>
+                            <li><a href="#recursos" class="text-gray-400 hover:text-pink-400 transition">Recursos</a>
+                            </li>
+                            <li><a href="#beneficios"
+                                    class="text-gray-400 hover:text-pink-400 transition">Benefícios</a></li>
+                            <li><a href="#depoimentos"
+                                    class="text-gray-400 hover:text-pink-400 transition">Depoimentos</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope mr-2 text-pink-400"></i>
+                                <a href="mailto:contato@beautybot.com.br"
+                                    class="text-gray-400 hover:text-pink-400 transition">contato@beautybot.com.br</a>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-phone mr-2 text-pink-400"></i>
+                                <a href="tel:+551199999999" class="text-gray-400 hover:text-pink-400 transition">(11)
+                                    9999-9999</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Redes Sociais</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-pink-400 transition text-xl">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-pink-400 transition text-xl">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-pink-400 transition text-xl">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-pink-400 transition text-xl">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 BeautyBot. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para rolagem suave -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
